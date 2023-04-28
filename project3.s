@@ -51,6 +51,9 @@ sub_b:
     lw $s0, 4($sp)
     li $t1, 113
     li $t0, 81
-    
+    li $t3, 0
+    li $t4, 0
+    li $t5,0
+    li $t6,0
 
 
