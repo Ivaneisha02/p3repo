@@ -19,3 +19,10 @@ main:
     jal sub_a
     addi $sp, $sp, 4
 
+exit:
+    li $v0, 10
+    li $a0, 0
+    syscall
+sub_a:
+
+
