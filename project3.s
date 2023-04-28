@@ -32,7 +32,7 @@ sub_a:
     li $s1, 0
 loop:
     lb $t0, ($s0)
-    beq 10, 10, verify
+    beq $t0, 10, verify
     bne $t0, 44, next
 verify:
     sub $t0, $s0, $s1
@@ -89,7 +89,7 @@ sub_b:
 processing:
     lbu $v0, ($s0)
     beq $v0, 10, check_substring
-    beg $v0, 44, check_substring
+    beq $v0, 44, check_substring
     beq $v0, 32, space
     beq $v0, 9, space
     blt $v0, 48, is_invalid
