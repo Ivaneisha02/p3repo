@@ -51,7 +51,13 @@ valid:
     syscall
     li $v0,4
     la $a0, left_paren
-    
+    syscall
+    li $v0,1
+    move $a0, $v1
+    syscall
+    li $v0,4
+    la $a0, right_paren
+    syscall
 sub_b:
     addi $sp, $sp, -4
     sw $s0, ($sp)
