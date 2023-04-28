@@ -8,3 +8,10 @@ right_paren: .asciiz ")"
 
 .text
 
+main:
+    li $v0, 8
+    la $a0, input
+    li $a1, 1000
+    syscall
+    addi $sp, $sp, -4
+
