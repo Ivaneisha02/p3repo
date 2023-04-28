@@ -111,6 +111,13 @@ is_upper:
     li $t5,1
     addi $v0, $v0,-55
     b convert
+is_lower:
+    beq $t5, 2, is_invalid
+    li $t5,1
+    addi $v0, $v0, -87
+convert:
+    li $t7,27
+    addi $t3, $t3, 1
 
 
 
