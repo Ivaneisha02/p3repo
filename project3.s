@@ -14,4 +14,8 @@ main:
     li $a1, 1000
     syscall
     addi $sp, $sp, -4
+    la $t0, input
+    sw $t0, ($sp)
+    jal sub_a
+    addi $sp, $sp, 4
 
