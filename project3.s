@@ -95,7 +95,11 @@ processing:
     blt $v0, 48, is_invalid
     ble $v0, 57, is_number
     blt $v0, 65, is_invalid
-    blt $v0, 81, is_upper
-    ble $v0, 97, is_invalid
+    ble $v0, 81, is_upper
+    blt $v0, 97, is_invalid
     ble $v0, 113, is_lower
+is_invalid:
+    li $t6,1
+    b skip
+
 
