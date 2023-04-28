@@ -58,6 +58,12 @@ valid:
     li $v0,4
     la $a0, right_paren
     syscall
+print_delimiter:
+    lbu $t0, ($s0)
+    beq
+next:
+    lbu $t0, ($s0)
+    addi $s0, $s0,1
 sub_b:
     addi $sp, $sp, -4
     sw $s0, ($sp)
