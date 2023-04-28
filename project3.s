@@ -132,6 +132,14 @@ check_substring:
     bgt $t3, 4, invalid_input
     bnez $t6,invalid_input
     b valid_input
+invalid_input:
+    la $v0, X
+    li $v1, -1
+    b return
+valid_input:
+    move $v0,$t4
+    move $v1, $t3
+
 
 
 
