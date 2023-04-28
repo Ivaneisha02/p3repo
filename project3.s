@@ -104,7 +104,12 @@ is_invalid:
 is_number:
     beq $t5,2, is_invalid
     li $t5, 1
-    addi $v0, $v0, -55
+    addi $v0, $v0, -48
+    b convert
+is_upper:
+    beq $t5, 2,is_invalid
+    li $t5,1
+    addi $v0, $v0,-55
     b convert
 
 
