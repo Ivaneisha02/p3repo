@@ -45,5 +45,12 @@ verify:
     li $v0,4
     syscall
     b print_delimiter
+sub_b:
+    addi $sp, $sp, -4
+    sw $s0, ($sp)
+    lw $s0, 4($sp)
+    li $t1, 113
+    li $t0, 81
+    
 
 
