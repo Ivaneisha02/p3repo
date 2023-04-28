@@ -34,4 +34,10 @@ loop:
     lb $t0, ($s0)
     beq 10, 10, verify
     bne $t0, 44, next
+verify:
+    sub $t0, $s0, $s1
+    addi $sp, $sp, -4
+    sw $t0, ($sp)
+    jal sub_b
+
 
