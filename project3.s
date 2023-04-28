@@ -24,5 +24,10 @@ exit:
     li $a0, 0
     syscall
 sub_a:
-
+    addi $sp, $sp, -12
+    sw $ra, ($sp)
+    sw $s0, 4($sp)
+    sw $s1, 8($sp)
+    lw $s0, 12($sp)
+    li $s1, 0
 
