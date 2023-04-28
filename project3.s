@@ -124,6 +124,14 @@ convert:
 space:
     beqz $t5, skip
     li $t5,2
+skip:
+    addi $s0, $s0,1
+    j processing
+check_substring:
+    beqz $t3, invalid_input
+    bgt $t3, 4, invalid_input
+    bnez $t6,invalid_input
+    b valid_input
 
 
 
