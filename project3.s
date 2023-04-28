@@ -39,5 +39,11 @@ verify:
     addi $sp, $sp, -4
     sw $t0, ($sp)
     jal sub_b
+    addi $sp, $sp, 4
+    bgez $v1, valid
+    move $a0, $v0
+    li $v0,4
+    syscall
+    b print_delimiter
 
 
