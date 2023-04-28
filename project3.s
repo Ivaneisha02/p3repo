@@ -45,6 +45,13 @@ verify:
     li $v0,4
     syscall
     b print_delimiter
+valid:
+    move $a0, $v0
+    li $v0, 1
+    syscall
+    li $v0,4
+    la $a0, left_paren
+    
 sub_b:
     addi $sp, $sp, -4
     sw $s0, ($sp)
@@ -55,5 +62,6 @@ sub_b:
     li $t4, 0
     li $t5,0
     li $t6,0
+
 
 
