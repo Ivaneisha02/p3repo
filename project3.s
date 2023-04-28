@@ -101,5 +101,11 @@ processing:
 is_invalid:
     li $t6,1
     b skip
+is_number:
+    beq $t5,2, is_invalid
+    li $t5, 1
+    addi $v0, $v0, -55
+    b convert
+
 
 
