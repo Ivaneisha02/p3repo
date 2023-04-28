@@ -60,7 +60,11 @@ valid:
     syscall
 print_delimiter:
     lbu $t0, ($s0)
-    beq
+    beq $t0, 10, processed
+    li $v0, 4
+    la $a0, delimiter
+    syscall
+    li $s1,-1
 next:
     lbu $t0, ($s0)
     addi $s0, $s0,1
