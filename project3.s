@@ -86,6 +86,11 @@ sub_b:
     li $t4, 0
     li $t5,0
     li $t6,0
-
+processing:
+    lbu $v0, ($s0)
+    beq $v0, 10, check_substring
+    beg $v0, 44, check_substring
+    beq $v0, 32, space
+    beq $v0, 9, space
 
 
