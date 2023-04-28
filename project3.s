@@ -139,6 +139,10 @@ invalid_input:
 valid_input:
     move $v0,$t4
     move $v1, $t3
+return:
+    lw $s0, 0($sp)
+    addi $sp, $sp,4
+    jr $ra
 
 
 
