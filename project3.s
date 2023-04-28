@@ -66,6 +66,12 @@ next:
     addi $s0, $s0,1
     addi $s1, $s1, 1
     bne $t0, 10,loop
+processed:
+    lw $ra, 0($sp)
+    lw $s0, 4($sp)
+    lw $s0, 8($sp)
+    addi $sp, $sp, 12 
+    jr $ra
 sub_b:
     addi $sp, $sp, -4
     sw $s0, ($sp)
