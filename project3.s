@@ -118,6 +118,12 @@ is_lower:
 convert:
     li $t7,27
     addi $t3, $t3, 1
+    mul $t4,$t4,$t7
+    add $t4, $t4,$v0
+    b skip
+space:
+    beqz $t5, skip
+    li $t5,2
 
 
 
