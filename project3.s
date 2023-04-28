@@ -30,4 +30,8 @@ sub_a:
     sw $s1, 8($sp)
     lw $s0, 12($sp)
     li $s1, 0
+loop:
+    lb $t0, ($s0)
+    beq 10, 10, verify
+    bne $t0, 44, next
 
