@@ -64,6 +64,8 @@ print_delimiter:
 next:
     lbu $t0, ($s0)
     addi $s0, $s0,1
+    addi $s1, $s1, 1
+    bne $t0, 10,loop
 sub_b:
     addi $sp, $sp, -4
     sw $s0, ($sp)
